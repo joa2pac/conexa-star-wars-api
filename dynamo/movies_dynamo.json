@@ -1,0 +1,24 @@
+{
+  "movies": [
+    {
+      "PutRequest": {
+        "Item": {
+          "movieId": {"S": "f47ac10b-58cc-4372-a567-0e02b2c3d479"},
+          "title": {"S": "Interstellar"},
+          "created": {"S": "2024-09-23"},
+          "deleted": {"BOOL": false}
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "movieId": {"S": "c9bf9e57-1685-4c89-bafb-ff5af830be8a"},
+          "title": {"S": "Oppenheimer"},
+          "created": {"S": "2024-09-23"},
+          "deleted": {"BOOL": false}
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  app:
+    container_name: app
+    build: .
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - EXTRA_CORS_ALLOWED_ORIGINS=*
+    volumes:
+      - .:/app
+    depends_on:
+      - localstack
+
+  localstack:
+    container_name: local-stack
+    image: localstack/localstack-pro:latest
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - LOCALSTACK_AUTH_TOKEN=
+      - EXTRA_CORS_ALLOWED_ORIGINS=*
+      - EXTRA_CORS_ALLOWED_HEADERS=*
+      - EDGE_PORT=4566
+      - SERVICES=cognito-idp,dynamodb,s3
+    ports:
+      - '4566-4570:4566-4570'
+    volumes:
+      - '${TMPDIR:-/tmp/localstack}:/var/lib/localstack'
+      - '/var/run/docker.sock:/var/run/docker.sock'
+networks:
+  default:
+    driver: bridge

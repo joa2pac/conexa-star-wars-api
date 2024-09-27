@@ -1,0 +1,62 @@
+{
+  "movies": [
+    {
+      "PutRequest": {
+        "Item": {
+          "movieId": {"S": "f47ac10b-58cc-4372-a567-0e02b2c3d479"},
+          "title": {"S": "Interstellar"},
+          "releaseDate": {"S": "2014-11-07"},
+          "director": {"S": "Christopher Nolan"},
+          "producer": {"S": "Emma Thomas"},
+          "created": {"S": "2024-09-23"},
+          "deleted": {"BOOL": false}
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "movieId": {"S": "c9bf9e57-1685-4c89-bafb-ff5af830be8a"},
+          "title": {"S": "Oppenheimer"},
+          "releaseDate": {"S": "2023-07-21"},
+          "director": {"S": "Christopher Nolan"},
+          "producer": {"S": "Emma Thomas"},
+          "created": {"S": "2024-09-23"},
+          "deleted": {"BOOL": false}
+        }
+      }
+    }
+  ],
+  "movie_details": [
+    {
+      "PutRequest": {
+        "Item": {
+          "movieId": {"S": "f47ac10b-58cc-4372-a567-0e02b2c3d479"},
+          "synopsis": {"S": "A group of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."},
+          "cast": {"L": [{"S": "Matthew McConaughey"}, {"S": "Anne Hathaway"}, {"S": "Jessica Chastain"}]},
+          "duration": {"N": "169"},
+          "genre": {"L": [{"S": "Sci-Fi"}, {"S": "Drama"}]},
+          "rating": {"S": "PG-13"},
+          "releaseDate": {"S": "2014-11-07"},
+          "created": {"S": "2024-09-23"},
+          "deleted": {"BOOL": false}
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "movieId": {"S": "c9bf9e57-1685-4c89-bafb-ff5af830be8a"},
+          "synopsis": {"S": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb."},
+          "cast": {"L": [{"S": "Cillian Murphy"}, {"S": "Emily Blunt"}, {"S": "Matt Damon"}]},
+          "duration": {"N": "180"},
+          "genre": {"L": [{"S": "Biography"}, {"S": "Drama"}]},
+          "rating": {"S": "R"},
+          "releaseDate": {"S": "2023-07-21"},
+          "created": {"S": "2024-09-23"},
+          "deleted": {"BOOL": false}
+        }
+      }
+    }
+  ]
+}
